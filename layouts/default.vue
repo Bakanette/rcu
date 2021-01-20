@@ -1,9 +1,10 @@
 <template>
   <div>
     <header>
+      <!--
       <div class="container">
         <div class="navbar">
-          <nuxt-link to="/" class="logo"><img src="../img/logo_rcu_small.png" alt="Logo RCU"> </nuxt-link>
+          <nuxt-link to="/" class="logo"><img src="../assets/img/logo_rcu_small.png" alt="Logo RCU"> </nuxt-link>
           <nav>
             <ul>
               <li><nuxt-link to="/actualite">Actualité</nuxt-link></li>
@@ -15,6 +16,26 @@
           </nav>
         </div>
       </div>
+      -->
+
+      <b-navbar toggleable type="dark" variant="dark">
+    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+
+    <b-navbar-toggle target="navbar-toggle-collapse">
+      <template #default="{ expanded }">
+        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+        <b-icon v-else icon="chevron-bar-down"></b-icon>
+      </template>
+    </b-navbar-toggle>
+
+    <b-collapse id="navbar-toggle-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="/actualite">Actualité</b-nav-item>
+        <b-nav-item href="/equipes">Les équipes</b-nav-item>
+        <b-nav-item href="/ecole">L'école de rugby</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
     </header>
     <nuxt/>
   </div>

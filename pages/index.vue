@@ -56,4 +56,8 @@ export default {
 .links {
   padding-top: 15px;
 }
+
+img{
+  width: 100%;
+}
 </style>
