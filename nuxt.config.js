@@ -8,7 +8,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '../img/favicon_rcu.png' },
       { rel: "preconnect", href: "https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap"}
     ]
   },
