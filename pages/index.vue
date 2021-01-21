@@ -29,7 +29,7 @@ export default {
       const options = 
       {
         year: 'numeric',
-        month: 'long',
+        month: 'numeric',
         day: 'numeric'
       };
       post.dateFormatted = new Intl.DateTimeFormat('fr-FR', options).format(new Date(post.published_at));
