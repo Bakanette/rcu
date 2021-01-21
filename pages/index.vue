@@ -6,7 +6,7 @@
           <li v-for="(post, index) in posts" :key="index">
             <img :src="post.feature_image">
             <div class="content">
-              <time>{{ post.dateFormatted }}</time> 
+              <span>{{ post.dateFormatted }}</span> 
               <nuxt-link :to="{ path: post.slug }">{{ post.title }}</nuxt-link>
               <p>{{ post.excerpt }}</p>
             </div>
@@ -86,9 +86,9 @@ export default {
       font-size: .8em;
     }
 
-    time {
+    span {
       color: #E72727;
-      text-transform: capitalize;
+      
     }
 
     p {
