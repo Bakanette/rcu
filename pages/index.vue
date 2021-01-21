@@ -6,7 +6,7 @@
           <li v-for="(post, index) in posts" :key="index">
             <img :src="post.feature_image">
             <div class="content">
-              <span>{{ post.authors[0].name }}</span>
+              <time>{{ post.dateFormatted }}</time> 
               <nuxt-link :to="{ path: post.slug }">{{ post.title }}</nuxt-link>
               <p>{{ post.excerpt }}</p>
             </div>
@@ -20,44 +20,86 @@
 import { getPosts } from '~/api/posts';
 
 export default {
-  async asyncData () {
+  async asyncData () 
+  {
     const posts = await getPosts();
+
+    posts.map(post => 
+    {
+      const options = 
+      {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+      post.dateFormatted = new Intl.DateTimeFormat('fr-FR', options).format(new Date(post.published_at));
+    });
+    
     return { posts: posts }
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss">
 
-.title {
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .container ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  body{
+    background-color: #181a1b;
+    color: lightgray;
+  }
 
-.links {
-  padding-top: 15px;
-}
+  main {
 
-img{
-  width: 100%;
-}
+    li {
+      background: white;
+      border-radius: 1em;
+      padding: .8em;
+      margin: 1em 0;
+      box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.04);
+    }
+
+    img {
+      width: 100%;
+      border-radius: .5em;
+    }
+
+    .content{
+      padding: .5em;
+    }
+
+    a {
+      font-size: 1.5em;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      display: block;
+      margin: -.1em 0 .2em;
+    }
+
+    h2 {
+      margin-top: 3em;
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+
+    time {
+      color: #E72727;
+      text-transform: capitalize;
+    }
+
+    p {
+      color: black;
+    }
+  }
+
+  @media only screen and (min-width: 768px)
+  {
+    body {
+      font-size: 1.1em;
+    }
+  }
 </style>
