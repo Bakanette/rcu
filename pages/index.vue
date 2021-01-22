@@ -32,7 +32,7 @@ export default {
         month: 'numeric',
         day: 'numeric'
       };
-      post.dateFormatted = new Intl.DateTimeFormat('fr-FR', options).format(new Date(post.published_at));
+      post.dateFormatted = new Intl.DateTimeFormat(options).format(new Date(post.published_at));
     });
     
     return { posts: posts }

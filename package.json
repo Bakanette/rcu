@@ -2,6 +2,9 @@
   "name": "rcu",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "ghost-api": "v3"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
