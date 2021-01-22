@@ -29,10 +29,10 @@ export default {
       const options = 
       {
         year: 'numeric',
-        month: 'numeric',
+        month: 'long',
         day: 'numeric'
       };
-      post.dateFormatted = new Intl.DateTimeFormat(options).format(new Date(post.published_at));
+      post.dateFormatted = new Intl.DateTimeFormat('fr-FR', options).format(new Date(post.published_at));
     });
     
     return { posts: posts }
@@ -83,12 +83,12 @@ export default {
     h2 {
       margin-top: 3em;
       text-transform: uppercase;
-      font-size: .8em;
+      font-size: 1em;
     }
 
     span {
       color: #E72727;
-      
+      text-transform: capitalize;
     }
 
     p {
