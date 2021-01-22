@@ -19,19 +19,6 @@
 <script>
 import { getPosts } from '~/api/posts';
 
-const posts = await getPosts();
-
-    posts.map(post => 
-    {
-      const options = 
-      {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      };
-      post.dateFormatted = new Intl.DateTimeFormat('fr-FR', options).format(new Date(post.published_at));
-    });
-
 export default {
   async asyncData () 
   {
@@ -45,7 +32,7 @@ export default {
         month: 'long',
         day: 'numeric'
       };
-      post.dateFormatted = new Intl.DateTimeFormat('fr-FR', options).format(new Date(post.published_at));
+      post.dateFormatted = new Intl.DateTimeFormat('fr', options).format(new Date(post.published_at));
     });
     
     return { posts: posts }
