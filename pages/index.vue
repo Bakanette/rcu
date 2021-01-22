@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <main>
-        <h2>Latest thoughts</h2>
+        <h2>Dernières actualités</h2>
         <ul>
           <li v-for="(post, index) in posts" :key="index">
             <img :src="post.feature_image">
@@ -100,6 +100,12 @@ export default {
   {
     body {
       font-size: 1.1em;
+    }
+
+    main li {
+      display: grid;
+      grid-template-columns: 200px auto;
+      grid-column-gap: 1em;
     }
   }
 </style>
