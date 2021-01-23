@@ -1,0 +1,46 @@
+<template>
+    <div class="container">
+      <main>
+        <h1 class="title-post">{{ post.title }}</h1>
+        <div class="content-post">
+            <div v-html="post.html">{{ post.html }}</div>
+        </div>
+      </main>
+    </div>
+</template>
+
+<script>
+import { getSinglePost } from '~/api/posts';
+
+export default {
+  async asyncData ({params}) 
+  {
+    const post = await getSinglePost(params.slug);   
+    return { post: post }
+  }
+}
+</script>
+
+<style>
+    .title-post {
+        padding-top: 1em;
+        color: white;
+        margin-bottom: 1em;
+    }
+
+    .content-post {
+        border-radius: 1em;
+        padding: 1em;
+    }
+
+    .content-post img {
+        width: 100%;
+    }
+
+@media only screen and (min-width: 768px) {
+    .content-post {
+        padding: 2em;
+    }
+}
+
+</style>
