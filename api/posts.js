@@ -26,3 +26,13 @@ const api = new GhostContentAPI({
       console.error(err);
     })
   }
+
+  export async function getPage(pageSlug) {
+    return await api.pages
+      .read({
+        slug: pageSlug
+      })
+      .catch(err => {
+        console.error(err);
+      })
+  }
