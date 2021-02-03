@@ -1,22 +1,28 @@
 <template>
     <div class="container">
       <main>
-        <h1>{{page.title}}</h1>
-        <div class="content">
-            <div v-html="page.html">{{ page.html}}</div>
-        </div>
+        <h2>Dernières actualités</h2>
+        <ul>
+          <li v-for="(post, index) in posts" :key="index">
+            <img :src="post.feature_image">
+            <div class="content">
+              <nuxt-link :to="{ path: post.slug }">{{ post.title }}</nuxt-link>
+              <p>{{ post.excerpt }}</p>
+            </div>
+          </li>
+        </ul>
       </main>
     </div>
 </template>
 
 <script>
-import { getPage } from '~/api/posts';
+import { getPostsPhotos } from '~/api/posts';
 
 export default {
   async asyncData () 
   {
-    const page = await getPage('galerie-photos');  
-    return { page: page }
+    const posts = await getPostsPhotos();
+    return { posts: posts }
   }
 }
 </script>
@@ -61,10 +67,10 @@ export default {
       margin: -.1em 0 .2em;
     }
 
-    h1 {
-      margin-top: 2em;
+    h2 {
+      margin-top: 3em;
       text-transform: uppercase;
-      font-size: 1.6em;
+      font-size: 1em;
     }
 
     span {
