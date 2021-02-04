@@ -8,7 +8,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'assets/img/favicon_rcu.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '~/static/favicon.ico' },
       { rel: "preconnect", href: "https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap"}
     ]
   },
@@ -29,14 +29,13 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'bootstrap-vue/nuxt'
   ],
   
   /*
   styleResources: {
     scss: [
-      '~assets/scss/_colors.scss'
     ] 
   }
   */

@@ -18,7 +18,7 @@
         <b-nav-item href="/equipes">Les équipes</b-nav-item>
         <b-nav-item href="/ecole">L'école de rugby</b-nav-item>
         <b-nav-item href="/staff">Le staff</b-nav-item>
-        <b-nav-item href="/galeriePhotos">Galerie photos</b-nav-item>
+        <b-nav-item href="/galerie-photos">Galerie photos</b-nav-item>
         <b-nav-item href="/partenaires">Les partenaires</b-nav-item>
       </b-navbar-nav>
     </b-collapse>

@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <main>
-        <h2>Dernières actualités</h2>
+        <h2>Galerie Photos</h2>
         <ul>
           <li v-for="(post, index) in posts" :key="index">
             <img :src="post.feature_image">
