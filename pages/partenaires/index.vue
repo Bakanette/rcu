@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <main>
-        <h1>{{page.title}}</h1>
+        <h1 class="red-title font-weight-bold">{{page.title}}</h1>
         <div class="content">
             <div v-html="page.html">{{ page.html}}</div>
         </div>
@@ -10,7 +10,7 @@
       <!-- Gallery item -->
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/Atzana_1.png" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
+          <div class="p-4 partenaire-card">
             <h5 class="text-dark">Atzana</h5>
             <p class="small text-muted mb-0">Atzana magasin de décoration, mobilier et aménagement intérieur est situé 5 place Albert 1er à Uzès.</p>
             <a class="btn-savoir font-weight-bold " href="https://atzana.com" >En savoir plus</a>
@@ -35,7 +35,7 @@
       <!-- Gallery item -->
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/Mat_1.png" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
+          <div class="p-4 partenaire-card-2">
             <h5 class="text-dark">Bianucci</h5>
             <p class="small text-muted mb-0">Partenaire du Rugby Club Uzès, Bianucci Matériaux est située 22 Boulevard Charles Gide à Uzès. 
             L’agence a un espace dédié à l’aménagement intérieur (service dressing, placard, cuisine, menuiserie).</p>
@@ -48,7 +48,7 @@
       <!-- Gallery item -->
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/Meduz_1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="p-4">
+          <div class="p-4 partenaire-card-3">
             <h5 class="text-dark">Meduz</h5>
             <p class="small text-muted mb-0">MEDUZ, brasserie artisanale située à Uzès direction Montaren est partenaire du Rugby Club d’Uzès depuis 2017. 
               C’est la bière idéale des 3èmes mi-temps et de la convivialité !</p>
@@ -186,11 +186,40 @@ export default {
 
 <style lang="scss">
 
-h1 {
-      margin-top: 3em;
-      text-transform: uppercase;
-      font-size: 1.5em;
-    }
+.red-title {
+  background: #cf2121;
+  color: #FCD870;
+  display: inline-block;
+  padding: .5em 1em;
+  margin-left: 15px;
+  font-size: 1.3em;
+  margin-top: 3em;
+      text-transform: uppercase
+}
+
+.partenaire-card {
+  min-height: 400px;
+}
+
+.partenaire-card a {
+  margin-top: 87%;
+}
+
+.partenaire-card-2 {
+  min-height: 413px;
+}
+
+.partenaire-card-2 a {
+  margin-top: 64%;
+}
+
+.partenaire-card-3 {
+  min-height: 313px;
+}
+
+.partenaire-card-3 a {
+  margin-top: 25%;
+}
 
 .content{
       padding: .5em;

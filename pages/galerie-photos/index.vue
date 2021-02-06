@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <main>
-        <h1>Galerie Photos</h1>
+        <h1 class="red-title font-weight-bold">Galerie Photos</h1>
         <ul>
           <li v-for="(post, index) in posts" :key="index">
             <img :src="post.feature_image">
@@ -28,14 +28,24 @@ export default {
 
 <style lang="scss">
 
+.red-title {
+  background: #cf2121;
+  color: #FCD870;
+  display: inline-block;
+  padding: .5em 1em;
+  margin-left: 15px;
+  font-size: 1.3em;
+  margin-top: 3em;
+      text-transform: uppercase
+}
+
+main {
+  margin-bottom: 700px;
+}
+
   .container ul {
     list-style-type: none;
     padding: 0;
-  }
-
-  body{
-    background-color: #181a1b;
-    color: lightgray;
   }
 
   main {

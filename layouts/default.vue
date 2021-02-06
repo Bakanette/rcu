@@ -60,7 +60,9 @@
   background-image: linear-gradient( 178.2deg,  rgb(99, 7, 7) 10.9%, rgb(197, 16, 16) 62.6% )!important;
 }
 
-
+.navbar-dark .navbar-nav .nav-link{
+      color:white!important
+    }
 
 .link-footer a{
   text-decoration: none;
