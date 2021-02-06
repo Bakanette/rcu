@@ -1,14 +1,13 @@
 <template>
     <div class="container">
       <main>
-        <h2>Galerie Photos</h2>
+        <h1>Galerie Photos</h1>
         <ul>
           <li v-for="(post, index) in posts" :key="index">
             <img :src="post.feature_image">
-            <div class="content">
-              <nuxt-link :to="{ path: post.slug }">{{ post.title }}</nuxt-link>
-              <p>{{ post.excerpt }}</p>
-            </div>
+            <figcaption class="content">
+              <a :href="post.slug">{{ post.title }}</a>
+            </figcaption>
           </li>
         </ul>
       </main>
@@ -41,58 +40,45 @@ export default {
 
   main {
 
+    ul {
+      display: flex;
+    }
+
     li {
-      background: white;
-      border-radius: 1em;
       padding: .8em;
       margin: 1em 0;
-      box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.04);
     }
 
     img {
-      width: 100%;
+      width: 250px;
       border-radius: .5em;
     }
 
     .content{
-      padding: .5em;
+      padding: .1em;
+      background-color: #181a1b;
     }
 
     a {
       font-size: 1.5em;
       text-decoration: none;
-      color: black;
+      color: lightgray;
       font-weight: bold;
       display: block;
       margin: -.1em 0 .2em;
     }
 
-    h2 {
-      margin-top: 3em;
+    h1 {
+      margin-top: 2.5em;
       text-transform: uppercase;
-      font-size: 1em;
-    }
-
-    span {
-      color: #E72727;
-      text-transform: capitalize;
-    }
-
-    p {
-      color: black;
+      font-size: 1.5em;
     }
   }
 
   @media only screen and (min-width: 768px)
   {
     body {
-      font-size: 1.1em;
-    }
-
-    main li {
-      display: grid;
-      grid-template-columns: 200px auto;
-      grid-column-gap: 1em;
+      font-size: 1em;
     }
   }
 </style>

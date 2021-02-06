@@ -1,14 +1,15 @@
 <template>
-<client-only>
     <div class="container">
         <main>
-            <h1>{{ post.title }}</h1>
+            <p>
+      This page is rendered on the <strong>{{ rendering }}</strong>
+    </p>
+            <h1 class="test">{{ post.title }}</h1>
             <div class="content">
-                <div v-html="post.html">{{ post.html }}</div>
+                <div v-html="post.html"/>
             </div>
         </main>
     </div>
-</client-only>
 </template>
 
 <script>
@@ -18,12 +19,19 @@ import { getSinglePost } from '~/api/posts';
 export default {
   async asyncData ({params}) {
     const post = await getSinglePost(params.slug);
-    return { post: post }
+    return { post: post,
+    rendering: process.server ? 'server' : 'client'
+     }
   }
 }
 </script>
 
 <style lang="scss">
+    
+    .test {
+        color: red;
+    }
+
     header {
         height: 15em;
     }
