@@ -23,17 +23,31 @@
         </section>
         <section class="equipe">
           <h2 class="red-title font-weight-bold">Les équipes</h2>
-          <a class="font-weight-bold btn-actus" href="#">Toutes les équipes</a>
-        </section>
-        <section class="ecole">
-          <h2 class="red-title font-weight-bold">L'école de rugby</h2>
-          <a class="font-weight-bold btn-actus" href="#">Plus d'infos</a>
           <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="p-3 p-md-4 p-lg-5">
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse inventore sequi delectus praesentium nostrum corrupti unde, fugit atque incidunt officiis voluptatum quisquam voluptatibus voluptate quas! Optio consequuntur vero dolorem obcaecati.</p>
+                <a class="font-weight-bold btn-ecole" href="#">Toutes les équipes</a>
+              </div>
+            </div>
             <div class="col-md-6">
               <img class="w-100" src="~/assets/img/img_accueil_bis.jpg" alt="">
             </div>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse inventore sequi delectus praesentium nostrum corrupti unde, fugit atque incidunt officiis voluptatum quisquam voluptatibus voluptate quas! Optio consequuntur vero dolorem obcaecati.</p>
+        </section>
+        <section class="ecole">
+          <h2 class="red-title font-weight-bold">L'école de rugby</h2>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <img class="w-100" src="~/assets/img/img_accueil_bis.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 p-md-4 p-lg-5">
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse inventore sequi delectus praesentium nostrum corrupti unde, fugit atque incidunt officiis voluptatum quisquam voluptatibus voluptate quas! Optio consequuntur vero dolorem obcaecati.</p>
+                <a class="font-weight-bold btn-ecole" href="#">Plus d'infos</a>
+              </div>
+            </div>
+          </div>
         </section>
         </div>
       </main>
@@ -65,12 +79,15 @@ export default {
 </script>
 
 <style lang="scss">
-/*
+
+.equipe img {
+  padding: 15px;
+}
+
 .ecole img {
-  display: block;
-  width: 50%;
-  margin-left: 1.5%;
-}*/
+padding: 15px;
+ 
+}
 
 .equipe {
   background-color: #EFF0F3;
@@ -100,6 +117,22 @@ export default {
   display: inline-block;
   padding: .5em 1em;
   margin-left: 15px;
+}
+
+.btn-ecole {
+  font-size: 0.9em;
+  background: #cf2121;
+  padding: .5em 1em;
+  border-radius: 10px;
+  color: #FCD870;
+  float: right;
+  transition-duration: 0.3s;
+  margin-right: 20px;
+}
+
+.btn-ecole:hover {
+  background-color: #fffc61;
+  color: #bd1212;
 }
 
 .btn-actus {
@@ -210,6 +243,18 @@ export default {
       transition-duration: 0.3s;
       margin-right: 20px;
       margin-top: 65px;
+    }
+
+    .ecole img {
+      padding: 0;
+      padding-left: 15px;
+      padding-bottom: 15px;
+    }
+
+    .equipe img {
+      padding: 0;
+      padding-right: 15px;
+      padding-bottom: 15px;
     }
     
   }

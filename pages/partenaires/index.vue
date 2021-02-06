@@ -70,8 +70,9 @@
         </div>
       </div>
       <!-- End -->
-
-      <!-- Gallery item -->
+      
+<!--
+     
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -82,9 +83,9 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
 
-      <!-- Gallery item -->
+      
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -95,9 +96,9 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
 
-      <!-- Gallery item -->
+      
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -108,9 +109,9 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
 
-      <!-- Gallery item -->
+      
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -121,9 +122,9 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
 
-      <!-- Gallery item -->
+      
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -134,9 +135,9 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
 
-      <!-- Gallery item -->
+      
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -147,9 +148,9 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
 
-      <!-- Gallery item -->
+      
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="~/assets/img/partenaires/default_artenaire.png" alt="" class="img-fluid card-img-top">
           <div class="p-4">
@@ -160,10 +161,12 @@
           </div>
         </div>
       </div>
-      <!-- End -->
+      
+      -->
 
     </div>
-    <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Montre m'en plus </a></div>
+
+<!--    <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Montre m'en plus </a></div> -->
   </div>
 </template>
 
